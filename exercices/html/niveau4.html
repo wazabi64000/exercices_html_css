@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML — Niveau 4 : Formulaires</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav>
+<div class="logo">Formation Web</div>
+<ul>
+<li><a href="niveau1.html">HTML 1</a></li>
+<li><a href="niveau2.html">HTML 2</a></li>
+<li><a href="niveau3.html">HTML 3</a></li>
+<li><a href="niveau4.html">HTML 4</a></li>
+<li><a href="niveau5.html">HTML 5</a></li>
+<li><a href="bonus.html">HTML Bonus</a></li>
+<li><a href="../css/niveau1.html">CSS 1</a></li>
+<li><a href="../css/niveau2.html">CSS 2</a></li>
+<li><a href="../css/niveau3.html">CSS 3</a></li>
+<li><a href="../css/niveau4.html">CSS 4</a></li>
+<li><a href="../css/niveau5.html">CSS 5</a></li>
+<li><a href="../css/bonus.html">CSS Bonus</a></li>
+<li><a href="../../index.html">Accueil</a></li>
+</ul>
+</nav>
+
+<main>
+<h1>HTML — Niveau 4 : Formulaires</h1>
+
+<section>
+<h2>Objectif</h2>
+<p>Apprendre à créer des formulaires interactifs avec différents types de champs et boutons.</p>
+</section>
+
+<section>
+<h2>Exemple de code</h2>
+<pre><code>&lt;form action="submit.php" method="post"&gt;
+  &lt;label for="nom"&gt;Nom:&lt;/label&gt;
+  &lt;input type="text" id="nom" name="nom" required&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+
+  &lt;label for="message"&gt;Message:&lt;/label&gt;
+  &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+
+  &lt;input type="submit" value="Envoyer"&gt;
+&lt;/form&gt;
+</code></pre>
+<ul class="explanation">
+<li>Chaque champ doit avoir un <code>label</code> associé pour l’accessibilité.</li>
+<li>Les types <code>text</code>, <code>email</code>, <code>password</code> sont les plus utilisés.</li>
+<li>Le bouton <code>submit</code> envoie le formulaire.</li>
+<li>L’attribut <code>required</code> rend le champ obligatoire.</li>
+</ul>
+</section>
+
+<section>
+<h2>Exercice</h2>
+<ol class="exercise">
+<li>Créer un formulaire de contact avec nom, email, message et bouton envoyer.</li>
+<li>Ajouter un <code>select</code> avec 3 options.</li>
+<li>Ajouter des <code>checkbox</code> ou <code>radio</code> pour des préférences.</li>
+<li>Tester l’envoi et la validation du formulaire.</li>
+</ol>
+</section>
+
+<section>
+<h2>Rendu d’exemple</h2>
+<form action="#" method="post">
+<label for="nom">Nom:</label>
+<input type="text" id="nom" name="nom" required>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+
+<label for="message">Message:</label>
+<textarea id="message" name="message"></textarea>
+
+<label for="choix">Choix:</label>
+<select id="choix" name="choix">
+<option value="1">Option 1</option>
+<option value="2">Option 2</option>
+<option value="3">Option 3</option>
+</select>
+
+<p>Préférences:</p>
+<input type="checkbox" id="newsletter" name="newsletter">
+<label for="newsletter">Recevoir la newsletter</label><br>
+<input type="radio" id="optionA" name="option" value="A">
+<label for="optionA">Option A</label>
+<input type="radio" id="optionB" name="option" value="B">
+<label for="optionB">Option B</label><br>
+
+<input type="submit" value="Envoyer">
+</form>
+</section>
+
+<section>
+<h2>Astuces et bonnes pratiques</h2>
+<ul class="tips">
+<li>Associer toujours <code>label</code> et <code>id</code>.</li>
+<li>Utiliser les types adaptés pour chaque champ (<code>email</code>, <code>number</code>, etc.).</li>
+<li>Tester la validation HTML5 avant JavaScript.</li>
+<li>Maintenir un ordre logique des champs pour l’accessibilité.</li>
+</ul>
+</section>
+
+</main>
+
+ 
+<script>
+(function(){
+const nav = document.querySelector('nav');
+const toggle = document.createElement('div');
+toggle.className = 'menu-toggle';
+toggle.textContent = '☰';
+nav.prepend(toggle);
+toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+})();
+</script>
+</body>
+</html>

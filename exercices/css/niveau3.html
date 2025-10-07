@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS — Niveau 3 : Box model et marges</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav>
+<div class="logo">Formation Web</div>
+<ul>
+<li><a href="../html/niveau1.html">HTML 1</a></li>
+<li><a href="../html/niveau2.html">HTML 2</a></li>
+<li><a href="../html/niveau3.html">HTML 3</a></li>
+<li><a href="../html/niveau4.html">HTML 4</a></li>
+<li><a href="../html/niveau5.html">HTML 5</a></li>
+<li><a href="../html/bonus.html">HTML Bonus</a></li>
+<li><a href="niveau1.html">CSS 1</a></li>
+<li><a href="niveau2.html">CSS 2</a></li>
+<li><a href="niveau3.html">CSS 3</a></li>
+<li><a href="niveau4.html">CSS 4</a></li>
+<li><a href="niveau5.html">CSS 5</a></li>
+<li><a href="bonus.html">CSS Bonus</a></li>
+<li><a href="../../index.html">Accueil</a></li>
+</ul>
+</nav>
+
+<main>
+<h1>CSS — Niveau 3 : Box model et marges</h1>
+
+<section>
+<h2>Objectif</h2>
+<p>Comprendre le box model CSS, la taille des éléments, les marges, padding et bordures.</p>
+</section>
+
+<section>
+<h2>Exemple de code</h2>
+<pre><code>div {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: lightgrey;
+}
+</code></pre>
+<ul class="explanation">
+<li>width/height : dimensions de l’élément.</li>
+<li>margin : espace extérieur à l’élément.</li>
+<li>padding : espace intérieur entre le contenu et la bordure.</li>
+<li>border : bordure autour de l’élément.</li>
+<li>background-color : couleur de fond.</li>
+</ul>
+</section>
+
+<section>
+<h2>Exercices</h2>
+<ol class="exercise">
+<li>Créer un div avec largeur et hauteur fixées.</li>
+<li>Ajouter un padding et une marge différents.</li>
+<li>Appliquer une bordure visible.</li>
+<li>Observer comment les dimensions totales changent avec padding et border.</li>
+</ol>
+</section>
+
+<section>
+<h2>Rendu d’exemple</h2>
+<div style="width:200px;height:100px;margin:20px;padding:10px;border:2px solid black;background-color:lightgrey;">
+Contenu dans une boîte
+</div>
+</section>
+
+<section>
+<h2>Astuces et bonnes pratiques</h2>
+<ul class="tips">
+<li>Se rappeler que width/height ne comprennent pas padding et border par défaut.</li>
+<li>Utiliser <code>box-sizing: border-box;</code> pour inclure padding et border dans les dimensions.</li>
+<li>Tester avec différents padding/margin pour comprendre l’espacement.</li>
+</ul>
+</section>
+
+</main>
+
+ 
+
+<script>
+(function(){
+const nav = document.querySelector('nav');
+const toggle = document.createElement('div');
+toggle.className = 'menu-toggle';
+toggle.textContent = '☰';
+nav.prepend(toggle);
+toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+})();
+</script>
+</body>
+</html>

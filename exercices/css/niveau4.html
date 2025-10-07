@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS — Niveau 4 : Flexbox et layout</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav>
+<div class="logo">Formation Web</div>
+<ul>
+<li><a href="../html/niveau1.html">HTML 1</a></li>
+<li><a href="../html/niveau2.html">HTML 2</a></li>
+<li><a href="../html/niveau3.html">HTML 3</a></li>
+<li><a href="../html/niveau4.html">HTML 4</a></li>
+<li><a href="../html/niveau5.html">HTML 5</a></li>
+<li><a href="../html/bonus.html">HTML Bonus</a></li>
+<li><a href="niveau1.html">CSS 1</a></li>
+<li><a href="niveau2.html">CSS 2</a></li>
+<li><a href="niveau3.html">CSS 3</a></li>
+<li><a href="niveau4.html">CSS 4</a></li>
+<li><a href="niveau5.html">CSS 5</a></li>
+<li><a href="bonus.html">CSS Bonus</a></li>
+<li><a href="../../index.html">Accueil</a></li>
+</ul>
+</nav>
+
+<main>
+<h1>CSS — Niveau 4 : Flexbox et layout</h1>
+
+<section>
+<h2>Objectif</h2>
+<p>Apprendre à organiser des éléments en ligne ou en colonne avec Flexbox pour créer des mises en page réactives.</p>
+</section>
+
+<section>
+<h2>Exemple de code</h2>
+<pre><code>.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+}
+</code></pre>
+<ul class="explanation">
+<li>display: flex : active le modèle Flexbox.</li>
+<li>flex-direction : ligne ou colonne.</li>
+<li>justify-content : positionnement horizontal des enfants.</li>
+<li>align-items : alignement vertical des enfants.</li>
+</ul>
+</section>
+
+<section>
+<h2>Exercices</h2>
+<ol class="exercise">
+<li>Créer une <code>div.container</code> contenant 3 <code>div.box</code>.</li>
+<li>Positionner les boîtes horizontalement avec espace égal.</li>
+<li>Changer la direction en colonne et observer l’effet.</li>
+<li>Tester différents alignements avec <code>justify-content</code> et <code>align-items</code>.</li>
+</ol>
+</section>
+
+<section>
+<h2>Rendu d’exemple</h2>
+<div class="container" style="display:flex;flex-direction:row;justify-content:space-around;align-items:center;height:150px;background-color:#eee;">
+<div class="box" style="width:100px;height:100px;background-color:lightblue;">1</div>
+<div class="box" style="width:100px;height:100px;background-color:lightgreen;">2</div>
+<div class="box" style="width:100px;height:100px;background-color:lightcoral;">3</div>
+</div>
+</section>
+
+<section>
+<h2>Astuces et bonnes pratiques</h2>
+<ul class="tips">
+<li>Flexbox est idéal pour les mises en page simples et réactives.</li>
+<li>Combiner <code>flex-wrap</code> pour gérer les lignes multiples.</li>
+<li>Tester sur différentes résolutions pour valider le comportement responsive.</li>
+</ul>
+</section>
+
+</main>
+
+ 
+<script>
+(function(){
+const nav = document.querySelector('nav');
+const toggle = document.createElement('div');
+toggle.className = 'menu-toggle';
+toggle.textContent = '☰';
+nav.prepend(toggle);
+toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+})();
+</script>
+</body>
+</html>

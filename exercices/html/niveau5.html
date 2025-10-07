@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML — Niveau 5 : Tableaux et media</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav>
+<div class="logo">Formation Web</div>
+<ul>
+<li><a href="niveau1.html">HTML 1</a></li>
+<li><a href="niveau2.html">HTML 2</a></li>
+<li><a href="niveau3.html">HTML 3</a></li>
+<li><a href="niveau4.html">HTML 4</a></li>
+<li><a href="niveau5.html">HTML 5</a></li>
+<li><a href="bonus.html">HTML Bonus</a></li>
+<li><a href="../css/niveau1.html">CSS 1</a></li>
+<li><a href="../css/niveau2.html">CSS 2</a></li>
+<li><a href="../css/niveau3.html">CSS 3</a></li>
+<li><a href="../css/niveau4.html">CSS 4</a></li>
+<li><a href="../css/niveau5.html">CSS 5</a></li>
+<li><a href="../css/bonus.html">CSS Bonus</a></li>
+<li><a href="../../index.html">Accueil</a></li>
+</ul>
+</nav>
+
+<main>
+<h1>HTML — Niveau 5 : Tableaux et media avancés</h1>
+
+<section>
+<h2>Objectif</h2>
+<p>Maîtriser les tableaux complexes, l’intégration de médias et les balises interactives comme <code>details</code> et <code>summary</code>.</p>
+</section>
+
+<section>
+<h2>Exemple de code</h2>
+<pre><code>&lt;table border="1"&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th>Nom&lt;/th&gt;&lt;th>Score&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td>Alice&lt;/td&gt;&lt;td>95&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td>Bob&lt;/td&gt;&lt;td>88&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;details&gt;
+  &lt;summary&gt;Lire plus&lt;/summary&gt;
+  &lt;p&gt;Contenu caché révélable par l’utilisateur.&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+<ul class="explanation">
+<li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> : structure des tableaux.</li>
+<li><code>&lt;details&gt;</code> et <code>&lt;summary&gt;</code> : créer des zones repliables.</li>
+<li>Le tableau peut avoir des styles CSS pour améliorer la lisibilité.</li>
+</ul>
+</section>
+
+<section>
+<h2>Exercice</h2>
+<ol class="exercise">
+<li>Créer un tableau avec en-tête et corps, minimum 3 colonnes et 5 lignes.</li>
+<li>Ajouter une section <code>details</code> avec un <code>summary</code> et du texte caché.</li>
+<li>Ajouter des images et vidéos intégrées pour illustrer le contenu.</li>
+<li>Tester l’affichage et la réactivité du tableau et des médias.</li>
+</ol>
+</section>
+
+<section>
+<h2>Rendu d’exemple</h2>
+<table border="1">
+<thead><tr><th>Nom</th><th>Score</th><th>Ville</th></tr></thead>
+<tbody>
+<tr><td>Valentin</td><td>95</td><td>Lille</td></tr>
+<tr><td>Jaqueline</td><td>88</td><td>Mulhouse</td></tr>
+<tr><td>Léo</td><td>72</td><td>Nice</td></tr>
+</tbody>
+</table>
+
+<details>
+<summary>Lire plus</summary>
+<p>Voici un exemple de contenu caché que l’utilisateur peut afficher.</p>
+</details>
+</section>
+
+<section>
+<h2>Astuces et bonnes pratiques</h2>
+<ul class="tips">
+<li>Structurer les tableaux avec <code>thead</code> et <code>tbody</code>.</li>
+<li>Utiliser <code>details/summary</code> pour rendre le contenu interactif sans JavaScript.</li>
+<li>Ajouter des médias avec des attributs <code>alt</code> et <code>controls</code>.</li>
+<li>Tester la compatibilité sur différents navigateurs et écrans.</li>
+</ul>
+</section>
+
+</main>
+
+ 
+
+<script>
+(function(){
+const nav = document.querySelector('nav');
+const toggle = document.createElement('div');
+toggle.className = 'menu-toggle';
+toggle.textContent = '☰';
+nav.prepend(toggle);
+toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS — Niveau 5 : Animations et transitions</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav>
+<div class="logo">Formation Web</div>
+<ul>
+<li><a href="../html/niveau1.html">HTML 1</a></li>
+<li><a href="../html/niveau2.html">HTML 2</a></li>
+<li><a href="../html/niveau3.html">HTML 3</a></li>
+<li><a href="../html/niveau4.html">HTML 4</a></li>
+<li><a href="../html/niveau5.html">HTML 5</a></li>
+<li><a href="../html/bonus.html">HTML Bonus</a></li>
+<li><a href="niveau1.html">CSS 1</a></li>
+<li><a href="niveau2.html">CSS 2</a></li>
+<li><a href="niveau3.html">CSS 3</a></li>
+<li><a href="niveau4.html">CSS 4</a></li>
+<li><a href="niveau5.html">CSS 5</a></li>
+<li><a href="bonus.html">CSS Bonus</a></li>
+<li><a href="../../index.html">Accueil</a></li>
+</ul>
+</nav>
+
+<main>
+<h1>CSS — Niveau 5 : Animations et transitions</h1>
+
+<section>
+<h2>Objectif</h2>
+<p>Apprendre à créer des effets dynamiques avec transitions et animations CSS.</p>
+</section>
+
+<section>
+<h2>Exemple de code</h2>
+<pre><code>/* Transition au survol */
+.button {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  transition: background-color 0.5s ease;
+}
+.button:hover {
+  background-color: darkblue;
+}
+
+/* Animation */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.rotate-box {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation: rotate 2s linear infinite;
+}
+</code></pre>
+<ul class="explanation">
+<li>transition : effet au survol ou au changement de propriété.</li>
+<li>@keyframes : définit une animation étape par étape.</li>
+<li>animation : applique l’animation à l’élément.</li>
+</ul>
+</section>
+
+<section>
+<h2>Exercices</h2>
+<ol class="exercise">
+<li>Créer un bouton qui change de couleur au survol.</li>
+<li>Créer un carré qui tourne en continu.</li>
+<li>Essayer différentes durées et fonctions d’animation.</li>
+<li>Combiner transitions et transformations pour des effets avancés.</li>
+</ol>
+</section>
+
+<section>
+<h2>Rendu d’exemple</h2>
+<button class="button" style="background-color:blue;color:white;padding:10px;transition:background-color 0.5s ease;">Bouton</button>
+<div class="rotate-box" style="width:100px;height:100px;background-color:orange;animation:rotate 2s linear infinite;margin-top:20px;"></div>
+</section>
+
+<section>
+<h2>Astuces et bonnes pratiques</h2>
+<ul class="tips">
+<li>Ne pas abuser des animations pour ne pas distraire l’utilisateur.</li>
+<li>Tester les performances sur mobile.</li>
+<li>Combiner transitions et transformations pour des effets plus fluides.</li>
+</ul>
+</section>
+
+</main>
+
+ 
+
+<script>
+(function(){
+const nav = document.querySelector('nav');
+const toggle = document.createElement('div');
+toggle.className = 'menu-toggle';
+toggle.textContent = '☰';
+nav.prepend(toggle);
+toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+})();
+</script>
+</body>
+</html>

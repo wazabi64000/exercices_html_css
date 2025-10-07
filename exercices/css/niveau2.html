@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS — Niveau 2 : Couleurs, polices et fonds</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav>
+<div class="logo">Formation Web</div>
+<ul>
+<li><a href="../html/niveau1.html">HTML 1</a></li>
+<li><a href="../html/niveau2.html">HTML 2</a></li>
+<li><a href="../html/niveau3.html">HTML 3</a></li>
+<li><a href="../html/niveau4.html">HTML 4</a></li>
+<li><a href="../html/niveau5.html">HTML 5</a></li>
+<li><a href="../html/bonus.html">HTML Bonus</a></li>
+<li><a href="niveau1.html">CSS 1</a></li>
+<li><a href="niveau2.html">CSS 2</a></li>
+<li><a href="niveau3.html">CSS 3</a></li>
+<li><a href="niveau4.html">CSS 4</a></li>
+<li><a href="niveau5.html">CSS 5</a></li>
+<li><a href="bonus.html">CSS Bonus</a></li>
+<li><a href="../../index.html">Accueil</a></li>
+</ul>
+</nav>
+
+<main>
+<h1>CSS — Niveau 2 : Couleurs, polices et fonds</h1>
+
+<section>
+<h2>Objectif</h2>
+<p>Apprendre à modifier les couleurs, les polices et les fonds d’une page web pour améliorer le design.</p>
+</section>
+
+<section>
+<h2>Exemple de code</h2>
+<pre><code>body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  color: #333333;
+}
+
+h1 {
+  color: darkblue;
+}
+
+p.important {
+  color: red;
+  font-weight: bold;
+}
+</code></pre>
+<ul class="explanation">
+<li><code>background-color</code> : couleur de fond de l’élément.</li>
+<li><code>font-family</code> : type de police.</li>
+<li><code>color</code> : couleur du texte.</li>
+<li><code>font-weight</code> : épaisseur du texte.</li>
+</ul>
+</section>
+
+<section>
+<h2>Exercices</h2>
+<ol class="exercise">
+<li>Appliquer un fond clair à la page.</li>
+<li>Changer la couleur et la police du titre principal.</li>
+<li>Créer une classe <code>.important</code> pour mettre en valeur certains paragraphes.</li>
+<li>Tester différentes polices disponibles sur le navigateur.</li>
+</ol>
+</section>
+
+<section>
+<h2>Rendu d’exemple</h2>
+<h1>Titre Bleu</h1>
+<p class="important">Paragraphe important en rouge.</p>
+<p>Paragraphe normal en couleur sombre.</p>
+</section>
+
+<section>
+<h2>Astuces et bonnes pratiques</h2>
+<ul class="tips">
+<li>Préférer les couleurs contrastées pour l’accessibilité.</li>
+<li>Limiter le nombre de polices pour garder l’uniformité.</li>
+<li>Utiliser les couleurs hexadécimales ou rgba pour plus de contrôle.</li>
+</ul>
+</section>
+
+</main>
+
+ 
+
+<script>
+(function(){
+const nav = document.querySelector('nav');
+const toggle = document.createElement('div');
+toggle.className = 'menu-toggle';
+toggle.textContent = '☰';
+nav.prepend(toggle);
+toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+})();
+</script>
+</body>
+</html>

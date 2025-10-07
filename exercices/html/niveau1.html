@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML — Niveau 2 : Sémantique</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">Formation Web</div>
+  <ul>
+    <li><a href="niveau1.html">HTML 1</a></li>
+    <li><a href="niveau2.html">HTML 2</a></li>
+    <li><a href="niveau3.html">HTML 3</a></li>
+    <li><a href="niveau4.html">HTML 4</a></li>
+    <li><a href="niveau5.html">HTML 5</a></li>
+    <li><a href="bonus.html">HTML Bonus</a></li>
+    <li><a href="../css/niveau1.html">CSS 1</a></li>
+    <li><a href="../css/niveau2.html">CSS 2</a></li>
+    <li><a href="../css/niveau3.html">CSS 3</a></li>
+    <li><a href="../css/niveau4.html">CSS 4</a></li>
+    <li><a href="../css/niveau5.html">CSS 5</a></li>
+    <li><a href="../css/bonus.html">CSS Bonus</a></li>
+    <li><a href="../../index.html">Accueil</a></li>
+  </ul>
+</nav>
+
+<main>
+<h1>HTML — Niveau 2 : Sémantique</h1>
+
+<section>
+<h2>Objectif</h2>
+<p>Apprendre les balises sémantiques pour améliorer la structure, le SEO et l’accessibilité de vos pages HTML.</p>
+</section>
+
+<section>
+<h2>Exemple de code</h2>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Exemple sémantique&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;h1&gt;Mon site&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Accueil&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;main&gt;
+      &lt;article&gt;
+        &lt;h2&gt;Article principal&lt;/h2&gt;
+        &lt;p&gt;Texte de l'article.&lt;/p&gt;
+      &lt;/article&gt;
+      &lt;aside&gt;
+        &lt;p&gt;Informations complémentaires.&lt;/p&gt;
+      &lt;/aside&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+      &lt;p&gt;© 2025 Mon site&lt;/p&gt;
+    &lt;/footer&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul class="explanation">
+<li><code>&lt;header&gt;</code> : bloc d’introduction ou en-tête.</li>
+<li><code>&lt;nav&gt;</code> : menu de navigation principal.</li>
+<li><code>&lt;main&gt;</code> : contenu principal.</li>
+<li><code>&lt;article&gt;</code> : contenu indépendant (article, billet, post).</li>
+<li><code>&lt;aside&gt;</code> : contenu secondaire ou complémentaire.</li>
+<li><code>&lt;footer&gt;</code> : pied de page.</li>
+</ul>
+</section>
+
+<section>
+<h2>Exercice</h2>
+<ol class="exercise">
+<li>Créer une page avec un <code>header</code>, un <code>nav</code>, un <code>main</code> contenant deux <code>article</code>, et un <code>aside</code>.</li>
+<li>Ajouter un <code>footer</code> avec vos coordonnées ou copyright.</li>
+<li>Structurer correctement les titres <code>h1</code> et <code>h2</code>.</li>
+<li>Tester la sémantique avec l’outil d’accessibilité de votre navigateur.</li>
+</ol>
+</section>
+
+<section>
+<h2>Rendu d’exemple</h2>
+<header>
+<h1>Mon site</h1>
+</header>
+<nav>
+<ul>
+<li><a href="#">Accueil</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+<main>
+<article>
+<h2>Article principal</h2>
+<p>Texte de l'article principal pour démonstration.</p>
+</article>
+<aside>
+<p>Informations supplémentaires et liens externes.</p>
+</aside>
+</main>
+<footer>
+<p>© 2025 Mon site</p>
+</footer>
+</section>
+
+<section>
+<h2>Astuces et bonnes pratiques</h2>
+<ul class="tips">
+<li>Utilisez toujours les balises sémantiques plutôt que des <code>div</code> génériques.</li>
+<li>Maintenez la hiérarchie des titres (<code>h1 → h2 → h3</code>).</li>
+<li>Testez l’accessibilité avec Lighthouse ou WAVE.</li>
+<li>Commentez votre code pour clarifier la structure.</li>
+</ul>
+</section>
+
+</main>
+
+ 
+
+<script>
+(function(){
+const nav = document.querySelector('nav');
+const toggle = document.createElement('div');
+toggle.className = 'menu-toggle';
+toggle.textContent = '☰';
+nav.prepend(toggle);
+toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+})();
+</script>
+</body>
+</html>

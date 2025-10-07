@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS — Niveau 1 : Sélecteurs et syntaxe</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav>
+<div class="logo">Formation Web</div>
+<ul>
+<li><a href="../html/niveau1.html">HTML 1</a></li>
+<li><a href="../html/niveau2.html">HTML 2</a></li>
+<li><a href="../html/niveau3.html">HTML 3</a></li>
+<li><a href="../html/niveau4.html">HTML 4</a></li>
+<li><a href="../html/niveau5.html">HTML 5</a></li>
+<li><a href="../html/bonus.html">HTML Bonus</a></li>
+<li><a href="niveau1.html">CSS 1</a></li>
+<li><a href="niveau2.html">CSS 2</a></li>
+<li><a href="niveau3.html">CSS 3</a></li>
+<li><a href="niveau4.html">CSS 4</a></li>
+<li><a href="niveau5.html">CSS 5</a></li>
+<li><a href="bonus.html">CSS Bonus</a></li>
+<li><a href="../../index.html">Accueil</a></li>
+</ul>
+</nav>
+
+<main>
+<h1>CSS — Niveau 1 : Sélecteurs et syntaxe</h1>
+
+<section>
+<h2>Objectif</h2>
+<p>Apprendre la syntaxe de base du CSS et les sélecteurs simples pour appliquer des styles aux éléments HTML.</p>
+</section>
+
+<section>
+<h2>Exemple de code</h2>
+<pre><code>/* Sélecteur par élément */
+p {
+  color: blue;
+  font-size: 16px;
+}
+
+/* Sélecteur par classe */
+.intro {
+  font-weight: bold;
+}
+
+/* Sélecteur par id */
+#titre {
+  text-align: center;
+}
+</code></pre>
+<ul class="explanation">
+<li>Les règles CSS suivent le format <code>sélecteur { propriété: valeur; }</code></li>
+<li>Les sélecteurs peuvent cibler un élément, une classe (<code>.nom</code>) ou un id (<code>#id</code>).</li>
+<li>La couleur et la taille de police sont des propriétés de base.</li>
+</ul>
+</section>
+
+<section>
+<h2>Exercices</h2>
+<ol class="exercise">
+<li>Créer un fichier <code>style.css</code> et lier-le à une page HTML existante.</li>
+<li>Appliquer une couleur différente à tous les <code>p</code> de la page.</li>
+<li>Créer une classe <code>.important</code> et l’appliquer à un paragraphe pour le mettre en gras.</li>
+<li>Créer un id <code>#titre</code> pour centrer un <code>h1</code>.</li>
+<li>Tester les changements dans le navigateur.</li>
+</ol>
+</section>
+
+<section>
+<h2>Rendu d’exemple</h2>
+<h1 id="titre">Titre Centré</h1>
+<p class="intro">Ce paragraphe est en gras et en couleur.</p>
+<p>Paragraphe normal en couleur bleue.</p>
+</section>
+
+<section>
+<h2>Astuces et bonnes pratiques</h2>
+<ul class="tips">
+<li>Utiliser des classes plutôt que des ids pour la réutilisabilité.</li>
+<li>Nommer les classes de manière explicite (<code>.intro</code>, <code>.important</code>).</li>
+<li>Éviter de mettre du style directement dans les balises HTML (inline) sauf pour tests rapides.</li>
+<li>Valider votre CSS avec un validateur comme W3C CSS Validator.</li>
+</ul>
+</section>
+
+</main>
+
+ 
+<script>
+(function(){
+const nav = document.querySelector('nav');
+const toggle = document.createElement('div');
+toggle.className = 'menu-toggle';
+toggle.textContent = '☰';
+nav.prepend(toggle);
+toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+})();
+</script>
+</body>
+</html>

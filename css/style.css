@@ -1,0 +1,197 @@
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f0f2f5;
+  color: #333;
+  display: flex;
+}
+
+/* Sidebar latérale */
+nav.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #222;
+  color: white;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+nav.sidebar .logo {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+nav.sidebar ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+nav.sidebar ul li {
+  margin: 10px 0;
+}
+
+nav.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav.sidebar ul li a:hover {
+  background-color: #444;
+  border-radius: 4px;
+}
+
+/* Contenu principal */
+.main-content {
+  margin-left: 220px; /* espace pour la sidebar */
+  padding: 20px;
+  flex: 1;
+  max-width: 900px;
+}
+
+/* Section styles */
+section {
+  margin-bottom: 30px;
+  padding: 15px 20px;
+  border-left: 6px solid #007BFF;
+  background-color: #f7f9fc;
+  border-radius: 6px;
+}
+
+section h2 {
+  color: #007BFF;
+  margin-bottom: 12px;
+}
+
+/* Code blocks */
+pre {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  padding: 15px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 15px;
+}
+
+code {
+  font-family: 'Courier New', monospace;
+}
+
+/* Explications */
+ul.explanation, ol.explanation {
+  background-color: #fff8dc;
+  border-left: 4px solid #ffc107;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+ul.explanation li, ol.explanation li {
+  margin-bottom: 8px;
+}
+
+/* Énoncés / exercices */
+ul.exercise, ol.exercise {
+  background-color: #e8f5e9;
+  border-left: 4px solid #28a745;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+ul.exercise li, ol.exercise li {
+  margin-bottom: 8px;
+}
+
+/* Astuces */
+div.tips {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff5722;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+/* Titres et paragraphes */
+h1, h2, h3 {
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Media pour images et vidéos */
+img, video {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+ 
+/* Toggle pour mobile */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Responsive : sidebar mobile */
+@media (max-width: 768px) {
+  nav.sidebar {
+    left: -220px;
+    transition: left 0.3s;
+  }
+
+  nav.sidebar.active {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+  border-top: 1px solid #444;
+}

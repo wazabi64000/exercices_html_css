@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HTML — Niveau 2 : Sémantique</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">Formation Web</div>
+  <ul>
+    <li><a href="niveau1.html">HTML 1</a></li>
+    <li><a href="niveau2.html">HTML 2</a></li>
+    <li><a href="niveau3.html">HTML 3</a></li>
+    <li><a href="niveau4.html">HTML 4</a></li>
+    <li><a href="niveau5.html">HTML 5</a></li>
+    <li><a href="../css/niveau2.html">CSS 2</a></li>
+    <li><a href="../../index.html">Accueil</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1>HTML — Niveau 2 : Sémantique</h1>
+
+  <section>
+    <h2>Objectif</h2>
+    <p>Apprendre à utiliser les balises sémantiques pour structurer le contenu et améliorer l’accessibilité.</p>
+  </section>
+
+  <section>
+    <h2>Exemple de structure</h2>
+    <pre><code>&lt;header&gt;
+  &lt;h1&gt;Mon Blog&lt;/h1&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Titre d'article&lt;/h2&gt;
+    &lt;p&gt;Contenu...&lt;/p&gt;
+    &lt;time datetime="2025-10-07"&gt;7 octobre 2025&lt;/time&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;...&lt;/footer&gt;
+</code></pre>
+    <h3>Explication</h3>
+    <ul>
+      <li><code>&lt;header&gt;</code> : zone d’introduction, logo, navigation.</li>
+      <li><code>&lt;main&gt;</code> : contenu principal unique par page.</li>
+      <li><code>&lt;article&gt;</code> : unité autonome réutilisable.</li>
+      <li><code>&lt;footer&gt;</code> : informations de bas de page.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Exercice</h2>
+    <p>Créer <code>article.html</code> : </p>
+    <ul>
+      <li><code>&lt;header&gt;</code> avec logo et menu</li>
+      <li><code>&lt;main&gt;</code> contenant un <code>&lt;article&gt;</code> complet (titre, date, auteur, paragraphes)</li>
+      <li><code>&lt;aside&gt;</code> avec ressources connexes</li>
+      <li><code>&lt;footer&gt;</code> avec mentions légales</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Astuces</h2>
+    <p>Un seul <code>&lt;h1&gt;</code> par page. Utiliser les niveaux d’en-têtes pour la hiérarchie. Préférer sémantique > <code>&lt;div&gt;</code>.</p>
+  </section>
+</main>
+
+ 
+
+<script>
+  (function(){
+    const nav = document.querySelector('nav');
+    const toggle = document.createElement('div');
+    toggle.className = 'menu-toggle';
+    toggle.textContent = '☰';
+    nav.prepend(toggle);
+    toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+  })();
+</script>
+</body>
+</html>

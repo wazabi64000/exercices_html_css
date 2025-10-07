@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercices HTML & CSS - Accueil</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+ 
+
+<main>
+  <h1>Formation HTML & CSS – Accueil</h1>
+  <p>Bienvenue dans le parcours de formation au développement front-end.  
+     Cette série d’exercices progressifs vous guidera du niveau débutant à intermédiaire en HTML et CSS.</p>
+
+  <section>
+    <h2>HTML – Niveaux 1 à 5</h2>
+    <ul>
+      <li><a href="exercices/html/niveau1.html">Niveau 1 – Structure de base</a></li>
+      <li><a href="exercices/html/niveau2.html">Niveau 2 – Sémantique</a></li>
+      <li><a href="exercices/html/niveau3.html">Niveau 3 – Médias</a></li>
+      <li><a href="exercices/html/niveau4.html">Niveau 4 – Formulaires</a></li>
+      <li><a href="exercices/html/niveau5.html">Niveau 5 – Mini-site</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>CSS – Niveaux 1 à 5</h2>
+    <ul>
+      <li><a href="exercices/css/niveau1.html">Niveau 1 – Bases du CSS</a></li>
+      <li><a href="exercices/css/niveau2.html">Niveau 2 – Box Model</a></li>
+      <li><a href="exercices/css/niveau3.html">Niveau 3 – Flexbox</a></li>
+      <li><a href="exercices/css/niveau4.html">Niveau 4 – Typographie & Couleurs</a></li>
+      <li><a href="exercices/css/niveau5.html">Niveau 5 – Responsive & Transitions</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Astuces</h2>
+    <p>Utilisez le menu responsive pour naviguer. Vérifiez chaque lien. Testez les pages sur différents écrans.</p>
+  </section>
+</main>
+
+ 
+
+<script>
+  (function(){
+    const nav = document.querySelector('nav');
+    const toggle = document.createElement('div');
+    toggle.className = 'menu-toggle';
+    toggle.textContent = '☰';
+    nav.prepend(toggle);
+    toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+  })();
+</script>
+
+</body>
+</html>

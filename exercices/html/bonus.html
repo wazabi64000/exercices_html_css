@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Bonus — Référentiel complet</title>
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<nav>
+<div class="logo">Formation Web</div>
+<ul>
+<li><a href="niveau1.html">HTML 1</a></li>
+<li><a href="niveau2.html">HTML 2</a></li>
+<li><a href="niveau3.html">HTML 3</a></li>
+<li><a href="niveau4.html">HTML 4</a></li>
+<li><a href="niveau5.html">HTML 5</a></li>
+<li><a href="bonus.html">HTML Bonus</a></li>
+<li><a href="../css/niveau1.html">CSS 1</a></li>
+<li><a href="../css/niveau2.html">CSS 2</a></li>
+<li><a href="../css/niveau3.html">CSS 3</a></li>
+<li><a href="../css/niveau4.html">CSS 4</a></li>
+<li><a href="../css/niveau5.html">CSS 5</a></li>
+<li><a href="../css/bonus.html">CSS Bonus</a></li>
+<li><a href="../../index.html">Accueil</a></li>
+</ul>
+</nav>
+
+<main>
+<h1>HTML Bonus — Référentiel complet</h1>
+
+<section>
+<h2>Objectif</h2>
+<p>Fournir un inventaire complet des balises HTML, les obsolètes, les sémantiques, et bonnes pratiques.</p>
+</section>
+
+<section>
+<h2>Liste des balises HTML courantes</h2>
+<ul class="explanation">
+<li><code>&lt;a&gt;</code> : lien hypertexte</li>
+<li><code>&lt;p&gt;</code> : paragraphe</li>
+<li><code>&lt;h1&gt;…&lt;h6&gt;</code> : titres</li>
+<li><code>&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt;</code> : listes</li>
+<li><code>&lt;div&gt;/&lt;span&gt;</code> : conteneurs génériques</li>
+<li><code>&lt;img&gt;</code> : image</li>
+<li><code>&lt;video&gt;/&lt;audio&gt;</code> : médias</li>
+<li><code>&lt;form&gt;/&lt;input&gt;/&lt;textarea&gt;/&lt;button&gt;</code> : formulaires</li>
+<li><code>&lt;table&gt;/&lt;tr&gt;/&lt;th&gt;/&lt;td&gt;</code> : tableaux</li>
+<li><code>&lt;header&gt;/&lt;footer&gt;/&lt;main&gt;/&lt;article&gt;/&lt;section&gt;/&lt;aside&gt;</code> : sémantique</li>
+<li><code>&lt;details&gt;/&lt;summary&gt;</code> : contenu interactif</li>
+</ul>
+</section>
+
+<section>
+<h2>Balises obsolètes</h2>
+<ul>
+<li><code>&lt;font&gt;</code>, <code>&lt;center&gt;</code>, <code>&lt;b&gt;</code> pour mise en forme (préférez CSS)</li>
+<li><code>&lt;marquee&gt;</code> : animation texte, à éviter</li>
+<li><code>&lt;u&gt;</code> : underline purement décorative, utiliser CSS</li>
+</ul>
+</section>
+
+<section>
+<h2>Bonnes pratiques</h2>
+<ul class="tips">
+<li>Privilégier les balises sémantiques pour le SEO et l’accessibilité.</li>
+<li>Ajouter systématiquement <code>alt</code> aux images.</li>
+<li>Valider le HTML avec W3C.</li>
+<li>Ne pas utiliser de balises obsolètes.</li>
+<li>Structurer les titres hiérarchiquement (<code>h1 → h2 → h3</code>).</li>
+<li>Maintenir une indentation propre et logique.</li>
+</ul>
+</section>
+
+</main>
+
+ 
+<script>
+(function(){
+const nav = document.querySelector('nav');
+const toggle = document.createElement('div');
+toggle.className = 'menu-toggle';
+toggle.textContent = '☰';
+nav.prepend(toggle);
+toggle.addEventListener('click', ()=> nav.classList.toggle('active'));
+})();
+</script>
+</body>
+</html>
